@@ -1,7 +1,8 @@
 # Prefect Demos
 A collection of demos scripts and progressive tutorials demonstrating Prefect Core and Prefect Cloud.
 
-### Navigation
+## Navigation
+![Prefect Core Logo](/images/prefect-core-logo.svg)
 #### Core Directory
 * Evolving ETL - Progressive data pipelines with increasing Prefect functionality, using multiple versions of Prefect Core
 * Snippets - Various snippets exemplifying different functionality
@@ -18,7 +19,7 @@ A collection of demos scripts and progressive tutorials demonstrating Prefect Co
 #### Sales
 * Demos - Demonstration scripts used in sales meetings and presentations
 
-### Links
+## Links
 * [Prefect](http://prefect.io)
 * [Prefect Documentation](http://docs.prefect.io)
 * [Prefect Core Documentation](https://docs.prefect.io/core/)
