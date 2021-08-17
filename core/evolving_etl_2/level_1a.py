@@ -1,7 +1,7 @@
 from random import randrange
 from prefect import task, Flow
 
-# Task Definitions
+# Task Definitions with functional API
 @task
 def extract():
     return randrange(1, 100)
@@ -14,7 +14,7 @@ def transform(data):
 def load(data):
     print(f"\nHere's your data: {data}")
 
-# Flow Definition for task dependencies
+# Flow Definition for task dependencies in with block
 with Flow("Evolving ETL") as flow:
     e = extract()
     t = transform(e)
