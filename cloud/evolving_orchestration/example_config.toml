@@ -1,0 +1,7 @@
+# This config is expected to live at ~/.prefect/config.toml on the machine 
+# that needs to interact with Prefect Cloud to register Flows (so either 
+# your laptop/local machine or the CI environment)
+
+[cloud]
+auth_token = "auth token" 
+# this is a TENANT scoped token, see: https://docs.prefect.io/orchestration/concepts/tokens.html#tokens
