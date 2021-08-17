@@ -1,13 +1,15 @@
+![Prefect Logo](/images/prefect-logo-full-gradient.svg)
 # Prefect Demos
 A collection of demos scripts and progressive tutorials demonstrating Prefect Core and Prefect Cloud.
 
 ## Navigation
-![Prefect Core Logo](/images/prefect-core-logo.svg)
 #### Core Directory
+![Prefect Core Logo](/images/prefect-core-logo.svg)
 * Evolving ETL - Progressive data pipelines with increasing Prefect functionality, using multiple versions of Prefect Core
 * Snippets - Various snippets exemplifying different functionality
 
 #### Cloud Directory
+![Prefect Cloud Logo](/images/prefect-cloud-logo-white.f7c8b5e3.svg)
 * Evolving Orchestration - Progressive data pipelines with increasing Prefect orchestration functionality, demonstrating the combinations of flow level configurations (storage, run_config, executor)
 * Orchestrator - Patterns and functionality for running a flow-of-flows, using multiple versions of Prefect Core
 * CLI - Various useful CLI commands for usage with Prefect +0.15.0
