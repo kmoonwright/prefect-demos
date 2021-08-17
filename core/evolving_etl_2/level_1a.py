@@ -21,4 +21,4 @@ with Flow("Evolving ETL") as flow:
     l = load(t)
 
 # Rather than flow.run(), utilize the CLI to run flow in a Python process:
-# prefect run -p core/evolving_etl_2/level_1.py
+# prefect run -p core/evolving_etl_2/level_1a.py
