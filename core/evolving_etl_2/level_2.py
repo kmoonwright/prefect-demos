@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from random import sample
 from prefect import task, Flow, Parameter, case
 
+# Task definitions with Functional API
 length = Parameter(name="length", default=3)
 
 @task
@@ -16,6 +17,7 @@ def transform(data: int):
 def load(data):
     print(f"\nHere's your data: {data}")
 
+# Schedule object consisting of two clocks
 from prefect.schedules import Schedule
 from prefect.schedules.clocks import IntervalClock
 
@@ -32,7 +34,9 @@ clock2 = IntervalClock(
 
 schedule = Schedule(clocks=[clock1, clock2])
 
+# Flow Definition for task dependencies in with block
 with Flow("Evolving ETL", schedule=schedule) as flow:
+    # Case blocks for our Parameter task
     with case(length, 6):
         e = extract(length)
         t = transform.map(e)
@@ -43,3 +47,6 @@ with Flow("Evolving ETL", schedule=schedule) as flow:
         t = transform.map(e)
         t2 = transform.map(t)
         l = load(t2)
+
+# Rather than flow.run(), utilize the CLI to run flow in a Python process:
+# prefect run -p core/evolving_etl_2/level_2.py
