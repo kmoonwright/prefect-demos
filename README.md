@@ -19,8 +19,8 @@ A collection of demos scripts and progressive tutorials demonstrating Prefect Co
 * Demos - Demonstration scripts used in sales meetings and presentations
 
 ### Links
-[Prefect Core](http://prefect.io)
-[Prefect Documentation](http://docs.prefect.io)
-[Prefect Core Documentation](https://docs.prefect.io/core/)
-[Prefect Cloud Documentation](https://docs.prefect.io/orchestration/)
-[Prefect API Documentation](https://docs.prefect.io/api/latest/)
+* [Prefect](http://prefect.io)
+* [Prefect Documentation](http://docs.prefect.io)
+* [Prefect Core Documentation](https://docs.prefect.io/core/)
+* [Prefect Cloud Documentation](https://docs.prefect.io/orchestration/)
+* [Prefect API Documentation](https://docs.prefect.io/api/latest/)
