@@ -1,0 +1,17 @@
+# Set a flow state for a Flow Run
+mutation {
+    set_flow_run_states(
+        input: {
+            states: [{ 
+                flow_run_id: "<FLOW_RUN_ID>", 
+                state: "{\"type\": \"Finished\"}", 
+            }]
+        }
+    ) {
+    states {
+      id,
+      status,
+      message
+    }
+  }
+}
