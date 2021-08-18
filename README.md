@@ -18,15 +18,15 @@ The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), co
 * Flow Metadata: Structure of dependencies between tasks and various configurations attached to aspects of your flow (Parameters, Scheduling, Retry Logic, Caching, etc...)
 
 
-## Navigation
-### Core Directory
+## Repository Navigation
+### Core
 <img src="/images/prefect-core-logo.svg" alt="drawing" width="300" height="30"/>
 
 * Evolving ETL - Progressive data pipelines with increasing Prefect functionality, using multiple versions of Prefect Core
 * Snippets - Various snippets exemplifying different functionality
 
 
-### Cloud Directory
+### Cloud
 <img src="/images/prefect-cloud-logo-white.f7c8b5e3.svg" alt="drawing" width="300" height="30"/>
 
 * Evolving Orchestration - Progressive data pipelines with increasing Prefect orchestration functionality, demonstrating the combinations of flow level configurations (storage, run_config, executor)
