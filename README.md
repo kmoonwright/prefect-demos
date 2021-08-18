@@ -16,22 +16,23 @@ The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), co
 * Flow Metadata: Structure of dependencies between tasks and various configurations attached to aspects of your flow (Parameters, Scheduling, Retry Logic, Caching, etc...)
 
 ## Navigation
-#### Core Directory
 ![Prefect Core Logo](/images/prefect-core-logo.svg)
+### Core Directory
 * Evolving ETL - Progressive data pipelines with increasing Prefect functionality, using multiple versions of Prefect Core
 * Snippets - Various snippets exemplifying different functionality
 
-#### Cloud Directory
 ![Prefect Cloud Logo](/images/prefect-cloud-logo-white.f7c8b5e3.svg)
+### Cloud Directory
 * Evolving Orchestration - Progressive data pipelines with increasing Prefect orchestration functionality, demonstrating the combinations of flow level configurations (storage, run_config, executor)
 * Orchestrator - Patterns and functionality for running a flow-of-flows, using multiple versions of Prefect Core
 * CLI - Various useful CLI commands for usage with Prefect +0.15.0
 
-#### GraphQL
+![GraphQL Logo](/images/graphql_logo.png)
+### GraphQL
 * Queries - Common queries/syntax to retrieve metadata from Prefect's GraphQL API
 * Mutations - Common mutations/syntax to retrieve metadata from Prefect's GraphQL API
 
-#### Sales
+### Sales
 * Demos - Demonstration scripts used in sales meetings and presentations
 
 ## Links
