@@ -5,7 +5,7 @@ from typing import List
 
 @task
 def taskA() -> List[int]: 
-  return results
+  return [1, 2, 3]
 
 @task
 def create_parameter_payload(result, param):
