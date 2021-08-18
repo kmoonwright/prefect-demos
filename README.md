@@ -17,6 +17,7 @@ The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), co
 
 ## Navigation
 ![Prefect Core Logo](/images/prefect-core-logo.svg)
+![Prefect Core Logo](<img src="/images/prefect-core-logo.svg" alt="drawing" width="300" height="30"/>)
 ### Core Directory
 * Evolving ETL - Progressive data pipelines with increasing Prefect functionality, using multiple versions of Prefect Core
 * Snippets - Various snippets exemplifying different functionality
