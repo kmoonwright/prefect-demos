@@ -5,15 +5,15 @@ A collection of demos scripts and progressive tutorials demonstrating the featur
 ## What is Prefect?
 [Prefect](http://prefect.io) is a data engineering framework and workflow orchestration technology for your Python jobs - a means to unite the efforts of data engineers, analysts, and DevOps engineers.
 
-The open source module, Prefect Core, contains a common set of components/semantics you need to create dynamic workflows as graphs, and they can be scheduled/monitored/configured using the managed backend API: Prefect Cloud. 
+The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), contains a common set of components and semantics to create dynamic workflows as graph structures, which can be scheduled/monitored/configured using the a backend API: either an instance of [Prefect Server](https://docs.prefect.io/orchestration/server/overview.html) or the managed [Prefect Cloud](https://cloud.prefect.io). 
 
-## Key Concepts
-Task: An individual unit of computation
-Flow: A collection of tasks in a graph structure
-TaskRun: An instance of a Task
-FlowRun: An instance of a Flow
-Agent: A lightweight process that polls the scheduler API for new or incomplete FlowRuns and allows you to orchestration workflows across heterogeneous environments
-Flow Metadata: Structure of dependencies between tasks and various configurations attached to aspects of your flow (Parameters, Scheduling, Retry Logic, Caching, etc...)
+## Key Terminology
+* Task: An individual unit of computation
+* Flow: A collection of tasks in a graph structure
+* TaskRun: An instance of a Task
+* FlowRun: An instance of a Flow
+* Agent: A lightweight process that polls the scheduler API for new or incomplete FlowRuns and allows you to orchestration workflows across heterogeneous environments
+* Flow Metadata: Structure of dependencies between tasks and various configurations attached to aspects of your flow (Parameters, Scheduling, Retry Logic, Caching, etc...)
 
 ## Navigation
 #### Core Directory
