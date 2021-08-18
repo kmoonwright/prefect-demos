@@ -2,10 +2,12 @@
 # Prefect Demos
 A collection of demos scripts and progressive tutorials demonstrating the features and funtionality of the Prefect Core workflow engine and Prefect Cloud orchestration.
 
+
 ## What is Prefect?
 [Prefect](http://prefect.io) is a data engineering framework and workflow orchestration technology for your Python jobs - a means to unite the efforts of data engineers, analysts, and DevOps engineers.
 
 The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), contains a common set of components and semantics to create dynamic workflows as graph structures, which can be scheduled/monitored/configured using the a backend API: either an instance of [Prefect Server](https://docs.prefect.io/orchestration/server/overview.html) or the managed [Prefect Cloud](https://cloud.prefect.io). 
+
 
 ## Key Terminology
 * Task: An individual unit of computation
@@ -15,6 +17,7 @@ The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), co
 * Agent: A lightweight process that polls the scheduler API for new or incomplete FlowRuns and allows you to orchestration workflows across heterogeneous environments
 * Flow Metadata: Structure of dependencies between tasks and various configurations attached to aspects of your flow (Parameters, Scheduling, Retry Logic, Caching, etc...)
 
+
 ## Navigation
 ### Core Directory
 <img src="/images/prefect-core-logo.svg" alt="drawing" width="300" height="30"/>
@@ -23,23 +26,24 @@ The open source module, [Prefect Core](https://github.com/PrefectHQ/prefect), co
 * Snippets - Various snippets exemplifying different functionality
 
 
-<img src="/images/prefect-cloud-logo-white.f7c8b5e3.svg" alt="drawing" width="300" height="30"/>
-<br/>
 ### Cloud Directory
+<img src="/images/prefect-cloud-logo-white.f7c8b5e3.svg" alt="drawing" width="300" height="30"/>
+
 * Evolving Orchestration - Progressive data pipelines with increasing Prefect orchestration functionality, demonstrating the combinations of flow level configurations (storage, run_config, executor)
 * Orchestrator - Patterns and functionality for running a flow-of-flows, using multiple versions of Prefect Core
 * CLI - Various useful CLI commands for usage with Prefect +0.15.0
 
 
+### GraphQL
 <img src="/images/graphql_logo.png" alt="drawing" width="300" height="70"/>
 
-### GraphQL
 * Queries - Common queries/syntax to retrieve metadata from Prefect's GraphQL API
 * Mutations - Common mutations/syntax to retrieve metadata from Prefect's GraphQL API
 
 
 ### Sales
 * Demos - Demonstration scripts used in sales meetings and presentations
+
 
 ## Links
 * [Prefect](http://prefect.io)
