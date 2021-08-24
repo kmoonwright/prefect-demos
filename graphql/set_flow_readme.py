@@ -15,6 +15,6 @@ client = Client()
 client.graphql(
     mutation,
     variables=dict(
-        input=dict(description="<README_STRING>", flow_group_id="<FLOW_GROUP_ID>")
+        input=dict(description="<README_MARKDOWN>", flow_group_id="<FLOW_GROUP_ID>")
     ),
 )
