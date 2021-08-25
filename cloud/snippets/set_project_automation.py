@@ -21,17 +21,14 @@ def query_project_flows(client, project_name):
                         }}
                     }}
                 ){{
-                    id,
-                    name,
-                    version,
-                    project {{name}}
+                    flow_group_id
                 }}
             }}
         """
     )
     # Returns flow ids for roject
     flow_objects = result["data"]["flow"]
-    return [flow["id"] for flow in flow_objects]
+    return [flow["flow_group_id"] for flow in flow_objects]
 
 # Create the action - create_action
 @task
@@ -74,10 +71,10 @@ def set_flow_automations(client, sla_id, flow__group_id):
 
 
 with Flow("Configure Project Automations") as flow:
-    API_KEY = Parameter(name="API Key")
-    TENANT_ID = Parameter(name="TENANT ID")
-    project_name = Parameter(name="Project with flows")
+    API_KEY = PrefectSecret(name="API Key")
+    TENANT_ID = PrefectSecret(name="TENANT ID")
     webhook_secret = PrefectSecret(name="SLACK_WEBHOOK_URL")
+    project_name = Parameter(name="Project with flows")
 
     client = start_prefect_client(API_KEY, TENANT_ID)
     flows = query_project_flows(client, project_name)
