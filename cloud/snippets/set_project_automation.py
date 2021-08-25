@@ -8,7 +8,6 @@ from prefect import Client
 def start_prefect_client(my_api_key, my_tenant_id):
     return Client(api_key=my_api_key, tenant_id=my_tenant_id)
 
-
 # Query for low IDs in a project
 @task
 def query_project_flows(client, project_name):
@@ -33,7 +32,6 @@ def query_project_flows(client, project_name):
     # Returns flow ids for roject
     flow_objects = result["data"]["flow"]
     return [flow["id"] for flow in flow_objects]
-
 
 # Create the action - create_action
 @task
