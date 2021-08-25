@@ -32,8 +32,7 @@ def query_project_flows(client, project_name):
 
 # Create the action - create_action
 @task
-def create_flow_automation(client, webhook_secret):
-    my_message = "MY_SLACK_MESSAGE"
+def create_flow_automation(client, webhook_secret, message):
     action = client.graphql(
         f"""
         mutation {{
@@ -41,7 +40,7 @@ def create_flow_automation(client, webhook_secret):
                 config: {{
                     slack_notification: {{
                         webhook_url_secret: {webhook_secret},
-                        message: {my_message}
+                        message: {message}
                     }}
                 }}
             }}) {{
@@ -75,10 +74,11 @@ with Flow("Configure Project Automations") as flow:
     TENANT_ID = PrefectSecret(name="TENANT ID")
     webhook_secret = PrefectSecret(name="SLACK_WEBHOOK_URL")
     project_name = Parameter(name="Project with flows")
+    message = Parameter(name="Slack Message", default="AY YO THERE BE STUFF TO DO")
 
     client = start_prefect_client(API_KEY, TENANT_ID)
     flows = query_project_flows(client, project_name)
-    automation = create_flow_automation(client, webhook_secret)
+    automation = create_flow_automation(client, webhook_secret, message)
 
     set_flow_automations.map(
         client=unmapped(client), sla_id=unmapped(automation), flow__group_id=flows
