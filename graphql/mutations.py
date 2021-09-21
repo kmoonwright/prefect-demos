@@ -130,3 +130,69 @@ advanced_query = client.graphql(
     }
     """
 )
+
+###########
+# Create an AUTOMATION in 4 steps - Cancel a FlowRun if it doesn't meet an SLA
+# 1- Create Flow SLA
+flow_sla_id = client.graphql(
+    """
+    mutation{
+        create_flow_sla_config (
+            input: {
+            kind: SCHEDULED_NOT_STARTED
+            duration_seconds: 20
+            }
+        ){
+            id
+        }
+    }
+    """
+)
+# 2 - Create Flow Group SLA
+flow_group_sla_id = client.graphql(
+    """
+    mutation{
+        create_flow_group_sla(
+                input: {
+            flow_sla_config_id:"<CREATED_FLOWSLACONFIG_ID>"
+            flow_group_id:"FLOW_GROUP_ID"
+            }
+        ) {
+            id
+        }
+    }
+    """
+)
+# 3 - Create Action
+action_id = client.graphql(
+    """
+    mutation {
+        create_action(
+            input: {
+            name: "MY GQL Action",
+            config: {
+                cancel_flow_run: {message: "THISISATEST YO"}
+            }
+            }
+        ){
+            id
+            __typename
+        }
+    }
+    """
+)
+# 4 - Attach action to the configured SLA
+client.graphql(
+    """
+    mutation {
+        create_flow_sla_failed_hook(
+            input: {
+            action_id: "<CREATED_ACTION_ID>"
+            sla_config_ids: "<CREATED_FLOWGROUPSLA>"
+            }
+        ) {
+            id
+        }
+    }
+    """
+)
