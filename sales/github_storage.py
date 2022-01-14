@@ -10,7 +10,7 @@ def hello_task(name):
     return "Done!"
 
 with Flow("Github Storage") as flow:
-    name = Parameter(default="Kyle")
+    name = Parameter(name="Name Parameter", default="Kyle")
     hello_task(name)
 
 
